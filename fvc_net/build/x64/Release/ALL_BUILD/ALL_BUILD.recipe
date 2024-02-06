@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\x64\Release\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\ops\Release\MLCodec_CXX.cp38-win_amd64.pyd</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\rans\Release\MLCodec_rans.cp38-win_amd64.pyd</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\x64\Release\ALL_BUILD</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

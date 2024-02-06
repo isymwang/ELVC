@@ -1,0 +1,10 @@
+^G:\WANGYIMING\OPTICAL_FLOW_GUIDED_FEATURE_COMPRESSION_BASELINE\FVC_NET\BUILD\3RDPARTY\PYBIND11\PYBIND11-DOWNLOAD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SG:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/pybind11/pybind11-download -BG:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/pybind11/pybind11-download --check-stamp-file G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/pybind11/pybind11-download/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
