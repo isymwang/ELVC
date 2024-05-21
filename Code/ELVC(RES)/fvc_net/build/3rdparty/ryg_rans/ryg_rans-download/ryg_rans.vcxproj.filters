@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\d4550bca8d0b2f2743865a2318150df9\ryg_rans-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\d4550bca8d0b2f2743865a2318150df9\ryg_rans-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\d4550bca8d0b2f2743865a2318150df9\ryg_rans-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\d4550bca8d0b2f2743865a2318150df9\ryg_rans-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\d4550bca8d0b2f2743865a2318150df9\ryg_rans-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\d4550bca8d0b2f2743865a2318150df9\ryg_rans-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\d4550bca8d0b2f2743865a2318150df9\ryg_rans-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\d4550bca8d0b2f2743865a2318150df9\ryg_rans-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\b0c8bcca1471c7418264841809e18fe9\ryg_rans-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\48f98b4b99ebd77e42576112626025e0\ryg_rans.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\ryg_rans" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5423C3CA-91B4-3503-B53C-89AA4BCC44F6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

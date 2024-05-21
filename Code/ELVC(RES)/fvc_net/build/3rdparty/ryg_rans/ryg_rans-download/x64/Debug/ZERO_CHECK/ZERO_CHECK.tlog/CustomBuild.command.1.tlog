@@ -1,0 +1,10 @@
+^G:\WANGYIMING\OPTICAL_FLOW_GUIDED_FEATURE_COMPRESSION_BASELINE\FVC_NET\BUILD\3RDPARTY\RYG_RANS\RYG_RANS-DOWNLOAD\CMAKEFILES\48F98B4B99EBD77E42576112626025E0\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SG:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download -BG:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-download.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/pybind11/pybind11-download/CMakeFiles/pybind11"
+		},
+		{
+			"file" : "G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/pybind11/pybind11-download/CMakeFiles/34710835ba9798c8a18f77fcb6aada92/pybind11.rule"
+		},
+		{
+			"file" : "G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/pybind11/pybind11-download/CMakeFiles/741fed8509c1ac6305195cdb605bed31/pybind11-complete.rule"
+		},
+		{
+			"file" : "G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/pybind11/pybind11-download/CMakeFiles/44cea35e258dca6877cf6deff87d014e/pybind11-build.rule"
+		},
+		{
+			"file" : "G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/pybind11/pybind11-download/CMakeFiles/44cea35e258dca6877cf6deff87d014e/pybind11-configure.rule"
+		},
+		{
+			"file" : "G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/pybind11/pybind11-download/CMakeFiles/44cea35e258dca6877cf6deff87d014e/pybind11-download.rule"
+		},
+		{
+			"file" : "G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/pybind11/pybind11-download/CMakeFiles/44cea35e258dca6877cf6deff87d014e/pybind11-install.rule"
+		},
+		{
+			"file" : "G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/pybind11/pybind11-download/CMakeFiles/44cea35e258dca6877cf6deff87d014e/pybind11-mkdir.rule"
+		},
+		{
+			"file" : "G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/pybind11/pybind11-download/CMakeFiles/44cea35e258dca6877cf6deff87d014e/pybind11-patch.rule"
+		},
+		{
+			"file" : "G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/pybind11/pybind11-download/CMakeFiles/44cea35e258dca6877cf6deff87d014e/pybind11-test.rule"
+		},
+		{
+			"file" : "G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/pybind11/pybind11-download/CMakeFiles/44cea35e258dca6877cf6deff87d014e/pybind11-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"pybind11"
+		],
+		"name" : "pybind11"
+	}
+}

@@ -1,0 +1,911 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A639E1D5-CA9C-3DED-944A-58136105A935}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ryg_rans</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\d4550bca8d0b2f2743865a2318150df9\ryg_rans-mkdir.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Creating directories for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/tmp/ryg_rans-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Debug/ryg_rans-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Creating directories for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Release -P G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/tmp/ryg_rans-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Release/ryg_rans-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Creating directories for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/MinSizeRel -P G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/tmp/ryg_rans-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/MinSizeRel/ryg_rans-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Creating directories for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/RelWithDebInfo -P G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/tmp/ryg_rans-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/RelWithDebInfo/ryg_rans-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\d4550bca8d0b2f2743865a2318150df9\ryg_rans-download.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing download step (git clone) for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/tmp/ryg_rans-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Debug/ryg_rans-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\ryg_rans-gitinfo.txt;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing download step (git clone) for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/tmp/ryg_rans-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Release/ryg_rans-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\ryg_rans-gitinfo.txt;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Performing download step (git clone) for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/tmp/ryg_rans-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/MinSizeRel/ryg_rans-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\ryg_rans-gitinfo.txt;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Performing download step (git clone) for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/tmp/ryg_rans-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/RelWithDebInfo/ryg_rans-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\ryg_rans-gitinfo.txt;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\d4550bca8d0b2f2743865a2318150df9\ryg_rans-update.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No update step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-src
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Debug/ryg_rans-update
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No update step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-src
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Release/ryg_rans-update
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No update step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-src
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/MinSizeRel/ryg_rans-update
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No update step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-src
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/RelWithDebInfo/ryg_rans-update
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\d4550bca8d0b2f2743865a2318150df9\ryg_rans-patch.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No patch step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Debug/ryg_rans-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No patch step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Release/ryg_rans-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No patch step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/MinSizeRel/ryg_rans-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No patch step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/RelWithDebInfo/ryg_rans-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\d4550bca8d0b2f2743865a2318150df9\ryg_rans-configure.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No configure step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Debug/ryg_rans-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\tmp\ryg_rans-cfgcmd.txt;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No configure step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Release/ryg_rans-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\tmp\ryg_rans-cfgcmd.txt;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No configure step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/MinSizeRel/ryg_rans-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\tmp\ryg_rans-cfgcmd.txt;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No configure step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/RelWithDebInfo/ryg_rans-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\tmp\ryg_rans-cfgcmd.txt;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\d4550bca8d0b2f2743865a2318150df9\ryg_rans-build.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No build step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Debug/ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No build step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Release/ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No build step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/MinSizeRel/ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No build step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/RelWithDebInfo/ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\d4550bca8d0b2f2743865a2318150df9\ryg_rans-install.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No install step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Debug/ryg_rans-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No install step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Release/ryg_rans-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No install step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/MinSizeRel/ryg_rans-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No install step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/RelWithDebInfo/ryg_rans-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\d4550bca8d0b2f2743865a2318150df9\ryg_rans-test.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No test step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Debug/ryg_rans-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No test step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Release/ryg_rans-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No test step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/MinSizeRel/ryg_rans-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No test step for 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-build
+if %errorlevel% neq 0 goto :cmEnd
+G:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/RelWithDebInfo/ryg_rans-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\b0c8bcca1471c7418264841809e18fe9\ryg_rans-complete.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Completed 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/CMakeFiles/Debug/ryg_rans-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Debug/ryg_rans-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-install;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-mkdir;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-download;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-update;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-patch;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-configure;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-build;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Debug\ryg_rans-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\Debug\ryg_rans-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Completed 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/CMakeFiles/Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/CMakeFiles/Release/ryg_rans-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/Release/ryg_rans-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-install;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-mkdir;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-download;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-update;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-patch;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-configure;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-build;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\Release\ryg_rans-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\Release\ryg_rans-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Completed 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/CMakeFiles/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/CMakeFiles/MinSizeRel/ryg_rans-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/MinSizeRel/ryg_rans-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-install;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-mkdir;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-download;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-update;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-patch;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-configure;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-build;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\MinSizeRel\ryg_rans-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\MinSizeRel\ryg_rans-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Completed 'ryg_rans'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/CMakeFiles/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/CMakeFiles/RelWithDebInfo/ryg_rans-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/ryg_rans-prefix/src/ryg_rans-stamp/RelWithDebInfo/ryg_rans-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-install;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-mkdir;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-download;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-update;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-patch;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-configure;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-build;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\src\ryg_rans-stamp\RelWithDebInfo\ryg_rans-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\RelWithDebInfo\ryg_rans-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\48f98b4b99ebd77e42576112626025e0\ryg_rans.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\Debug\ryg_rans-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\ryg_rans</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\Release\ryg_rans-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\ryg_rans</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\MinSizeRel\ryg_rans-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\ryg_rans</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\RelWithDebInfo\ryg_rans-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\ryg_rans</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SG:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download -BG:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download --check-stamp-file G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\3.24.3\CMakeSystem.cmake;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\tmp\ryg_rans-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SG:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download -BG:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download --check-stamp-file G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\3.24.3\CMakeSystem.cmake;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\tmp\ryg_rans-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SG:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download -BG:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download --check-stamp-file G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\3.24.3\CMakeSystem.cmake;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\tmp\ryg_rans-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SG:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download -BG:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download --check-stamp-file G:/wangyiming/optical_flow_guided_feature_compression_baseline/fvc_net/build/3rdparty/ryg_rans/ryg_rans-download/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\3.24.3\CMakeSystem.cmake;G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ryg_rans-prefix\tmp\ryg_rans-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\CMakeFiles\ryg_rans">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="G:\wangyiming\optical_flow_guided_feature_compression_baseline\fvc_net\build\3rdparty\ryg_rans\ryg_rans-download\ZERO_CHECK.vcxproj">
+      <Project>{89984C40-D846-34BD-9D45-09858A49F7E6}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
