@@ -180,10 +180,6 @@ class DAB(nn.Module):
         self.relu = nn.LeakyReLU(0.1, True)
 
     def forward(self, x):
-        '''
-        :param x[0]: feature map: B * C * H * W
-        :param x[1]: degradation representation: B * C
-        '''
 
         out = self.relu(self.da_conv1(x))
         out = self.relu(self.conv1(out))
@@ -211,29 +207,24 @@ class feature_DA_conv(nn.Module):
         self.E = Encoder(aux_channel)
 
     def forward(self, x, y):
-        '''
-        :param x[0]: feature map: B * C * H * W
-        :param x[1]: degradation representation: B * C
-        '''
+
         b, c, h, w = x.size()
 
         y = self.E(y)
 
 
         # branch 1
-        # print(y.shape)
         kernel = self.kernel(y)
-        # print(kernel.shape)
+
         kernel = kernel.view(-1, 1, self.kernel_size, self.kernel_size)
-        # print(kernel.shape)
+
         out = self.relu(F.conv2d(x.view(1, -1, h, w), kernel, groups=b*c, padding=(self.kernel_size-1)//2))
-        # print(out.shape)
+
         out = self.conv(out.view(b, -1, h, w))
-        # print(out.shape)
+
 
         # branch 2
         out = out + self.ca(x, y)
-
         return out
 
 
@@ -257,23 +248,19 @@ class DA_conv(nn.Module):
         self.E = Encoder(aux_channel)
 
     def forward(self, x):
-        '''
-        :param x[0]: feature map: B * C * H * W
-        :param x[1]: degradation representation: B * C
-        '''
+
         b, c, h, w = x.size()
 
         y = self.E(x)
-        # branch 1
-        # print(y.shape)
+
         kernel = self.kernel(y)
-        # print(kernel.shape)
+
         kernel = kernel.view(-1, 1, self.kernel_size, self.kernel_size)
-        # print(kernel.shape)
+
         out = self.relu(F.conv2d(x.view(1, -1, h, w), kernel, groups=b*c, padding=(self.kernel_size-1)//2))
-        # print(out.shape)
+
         out = self.conv(out.view(b, -1, h, w))
-        # print(out.shape)
+
 
         # branch 2
         out = out + self.ca(x)
@@ -292,10 +279,7 @@ class CA_layer(nn.Module):
         )
 
     def forward(self, x):
-        '''
-        :param x[0]: feature map: B * C * H * W
-        :param x[1]: degradation representation: B * C
-        '''
+
         att = self.conv_du(x)
 
         return x * att
@@ -373,16 +357,11 @@ def loadweightformnp(layername):
         modelweight = modelspath + name + '-weight.npy'
         modelbias = modelspath + name + '-bias.npy'
         weightnp = np.load(modelweight)
-        # weightnp = np.transpose(weightnp, [2, 3, 1, 0])
-        # print(weightnp)
+
         biasnp = np.load(modelbias)
 
-        # init_weight = lambda shape, dtype: weightnp
-        # init_bias   = lambda shape, dtype: biasnp
-        # print('Done!')
 
         return torch.from_numpy(weightnp), torch.from_numpy(biasnp)
-        # return init_weight, init_bias
 
 
 class MEBasic(nn.Module):
@@ -426,22 +405,7 @@ class ME_Spynet(nn.Module):
         self.L = 4
         self.moduleBasic = torch.nn.ModuleList(
             [MEBasic(layername + 'modelL' + str(intLevel + 1)) for intLevel in range(4)])
-        # self.meBasic1 = MEBasic(layername + 'modelL1')
-        # self.meBasic2 = MEBasic(layername + 'modelL2')
-        # self.meBasic3 = MEBasic(layername + 'modelL3')
-        # self.meBasic4 = MEBasic(layername + 'modelL4')
-        # self.flow_warp = Resample2d()
 
-        # self.meBasic = [self.meBasic1, self.meBasic2, self.meBasic3, self.meBasic4]
-
-    # def Preprocessing(self, im):
-    #     im[:, 0, :, :] -= 0.406
-    #     im[:, 1, :, :] -= 0.456
-    #     im[:, 2, :, :] -= 0.485
-    #     im[:, 0, :, :] /= 0.225
-    #     im[:, 1, :, :] /= 0.224
-    #     im[:, 2, :, :] /= 0.229
-    #     return im
 
     def forward(self, im1, im2):
         batchsize = im1.size()[0]

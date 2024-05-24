@@ -1,3 +1,4 @@
+import time
 from typing import List
 
 import torch
@@ -15,8 +16,8 @@ from fvc_net.layers.layers import GDN, MaskedConv2d
 from fvc_net.layer import *
 from fvc_net.multi_context import *
 from mmcv.ops import ModulatedDeformConv2d as DCN
-
-
+from feature_map_visual.feature_visual import feature_map_vis
+from flow_vis import optical_flow_vis
 import dataset
 
 def save_model(model,iter,model_save, train_lambda,stages):
@@ -65,12 +66,80 @@ class NVC(nn.Module):
         self.motion_hyperprior = Hyperprior_mv(planes=out_channel_M, mid_planes=out_channel_M)
 
 
-        ###residual
-        self.resEncoder = Analysis_net(in_planes=out_channel_F, out_planes=out_channel_F)
-        self.resDecoder = Synthesis_net(in_planes=out_channel_F, out_planes=out_channel_F)
-        self.res_hyperprior = Hyperprior_res(planes=128, mid_planes=128)
+
+        ##context
+
+        self.feature_extract = nn.Sequential(
+            nn.Conv2d(3, out_channel_N, 3, stride=1, padding=1),
+            ResBlock(out_channel_N, out_channel_N, 3),
+        )
+        self.context_hyperprior = Hyperprior_context(planes=128, mid_planes=128)
+
+        self.context_refine = nn.Sequential(
+            ResBlock(out_channel_N, out_channel_N, 3),
+            nn.Conv2d(out_channel_N, out_channel_N, 3, stride=1, padding=1),
+        )
+
+        self.temporalPriorEncoder = nn.Sequential(
+            nn.Conv2d(out_channel_N, out_channel_N, 5, stride=2, padding=2),
+            GDN(out_channel_N),
+            nn.Conv2d(out_channel_N, out_channel_N, 5, stride=2, padding=2),
+            GDN(out_channel_N),
+            nn.Conv2d(out_channel_N, out_channel_N, 5, stride=2, padding=2),
+            GDN(out_channel_N),
+            nn.Conv2d(out_channel_N, out_channel_M, 5, stride=2, padding=2),
+        )
+
+
+        self.contextualEncoder = nn.Sequential(
+            nn.Conv2d(out_channel_N + 3, out_channel_N, 5, stride=2, padding=2),
+            GDN(out_channel_N),
+            ResBlock_LeakyReLU_0_Point_1(out_channel_N),
+            nn.Conv2d(out_channel_N, out_channel_N, 5, stride=2, padding=2),
+            GDN(out_channel_N),
+            ResBlock_LeakyReLU_0_Point_1(out_channel_N),
+            nn.Conv2d(out_channel_N, out_channel_N, 5, stride=2, padding=2),
+            GDN(out_channel_N),
+            nn.Conv2d(out_channel_N, out_channel_M, 5, stride=2, padding=2),
+        )
+
+        self.contextualDecoder_part1 = nn.Sequential(
+            subpel_conv3x3(out_channel_M, out_channel_N, 2),
+            GDN(out_channel_N, inverse=True),
+
+            subpel_conv3x3(out_channel_N, out_channel_N, 2),
+            GDN(out_channel_N, inverse=True),
+            ResBlock_LeakyReLU_0_Point_1(out_channel_N),
+
+            subpel_conv3x3(out_channel_N, out_channel_N, 2),
+            GDN(out_channel_N, inverse=True),
+            ResBlock_LeakyReLU_0_Point_1(out_channel_N),
+            subpel_conv3x3(out_channel_N, out_channel_N, 2),
+        )
+
+        self.contextualDecoder_part2 = nn.Sequential(
+            nn.Conv2d(out_channel_N * 2, out_channel_N, 3, stride=1, padding=1),
+            ResBlock(out_channel_N, out_channel_N, 3),
+            ResBlock(out_channel_N, out_channel_N, 3),
+            nn.Conv2d(out_channel_N, 3, 3, stride=1, padding=1),
+        )
+
+        self.contextualDecoder_refinement = nn.Sequential(
+            nn.Conv2d(out_channel_N * 2, out_channel_N, 3, stride=1, padding=1),
+            ResBlock(out_channel_N, out_channel_N, 3),
+            ResBlock(out_channel_N, out_channel_N, 3),
+            nn.Conv2d(out_channel_N, out_channel_N, 3, stride=1, padding=1),
+
+        )
 
         self.loop_filter = LoopFilter(out_channel_M//2)
+
+    def motioncompensation(self, ref, mv):
+        ref_feature = self.feature_extract(ref)
+        prediction_init = flow_warp(ref_feature, mv)
+        context = self.context_refine(prediction_init)
+
+        return context
 
     def MC_net(self,ref, mv):
         warpframe = flow_warp(ref, mv)
@@ -81,7 +150,7 @@ class NVC(nn.Module):
 
 
     def aux_loss(self):
-        """Return a list of the auxiliary entropy bottleneck over module(s)."""
+
         aux_loss_list = []
         for m in self.modules():
             if isinstance(m, CompressionModel):
@@ -93,56 +162,74 @@ class NVC(nn.Module):
     def compress(self,input_image, referframe,frame_i):
         mv = self.ME_Net(input_image, referframe)
 
+
+
         mv_feature = self.conv_mv(mv)
         mv_refine = self.motion_refinement(mv_feature)
+
         mv_feature = self.motion_encoder(mv_refine)
+
         quant_mv, out_motion = self.motion_hyperprior.compress(mv_feature)
 
         mv_hat = self.motion_decoder(quant_mv)
 
-        prediction = self.MC_net(referframe, mv_hat)
+        prediction=self.motioncompensation(referframe, mv_hat)
 
-        input_residual = input_image - prediction
 
-        feature = self.resEncoder(input_residual)
-        quant_res, out_res = self.res_hyperprior.compress(feature)
-        res_hat = self.resDecoder(quant_res)
+        ###contextual coding
+        temporal_prior_params = self.temporalPriorEncoder(prediction)
 
-        recon_image = res_hat + prediction
+        encoded_context = self.contextualEncoder(torch.cat((input_image, prediction), dim=1))
+
+        context_hat, out_context = self.context_hyperprior.compress(encoded_context, temporal_prior_params)
+
+        recon_image = self.contextualDecoder_part1(context_hat)
+
+        recon_image = self.contextualDecoder_part2(torch.cat((recon_image, prediction), dim=1))
 
         x_hat = self.loop_filter(torch.cat([referframe, recon_image], 1)) + recon_image
+
 
 
         return {
             "strings": {
                 "motion": out_motion["strings"],
-                "res": out_res["strings"],
+                "context": out_context["strings"],
             },
             "shape": {
                 "motion": out_motion["shape"],
-                "res": out_res["shape"]},
+                "context": out_context["shape"]},
         }
 
 
     def decompress(self,referframe,strings,shapes):
 
+
         key = "motion"
         quant_mv = self.motion_hyperprior.decompress(strings[key], shapes[key])
         mv_hat = self.motion_decoder(quant_mv)
 
-        prediction = self.MC_net(referframe, mv_hat)
 
-        key = "res"
+        prediction=self.motioncompensation(referframe, mv_hat)
 
-        quant_res= self.res_hyperprior.decompress(strings[key], shapes[key])
-        res_hat = self.resDecoder(quant_res)
 
-        recon_image = res_hat + prediction
+        temporal_prior_params = self.temporalPriorEncoder(prediction)
+
+        key = "context"
+
+        context_hat= self.context_hyperprior.decompress(strings[key], shapes[key],temporal_prior_params)
+
+
+        recon_image = self.contextualDecoder_part1(context_hat)
+
+        recon_image = self.contextualDecoder_part2(torch.cat((recon_image, prediction), dim=1))
 
         x_hat = self.loop_filter(torch.cat([referframe, recon_image], 1)) + recon_image
 
+
         x_rec= x_hat.clamp(0., 1.)
         return {"x_hat": x_rec}
+
 
 
     def load_state_dict(self, state_dict):
@@ -150,14 +237,14 @@ class NVC(nn.Module):
         # Dynamically update the entropy bottleneck buffers related to the CDFs
 
         update_registered_buffers(
-            self.res_hyperprior.gaussian_conditional,
-            "res_hyperprior.gaussian_conditional",
+            self.context_hyperprior.gaussian_conditional,
+            "context_hyperprior.gaussian_conditional",
             ["_quantized_cdf", "_offset", "_cdf_length", "scale_table"],
             state_dict,
         )
         update_registered_buffers(
-            self.res_hyperprior.entropy_bottleneck,
-            "res_hyperprior.entropy_bottleneck",
+            self.context_hyperprior.entropy_bottleneck,
+            "context_hyperprior.entropy_bottleneck",
             ["_quantized_cdf", "_offset", "_cdf_length"],
             state_dict,
         )
@@ -192,8 +279,8 @@ class NVC(nn.Module):
         if scale_table is None:
             scale_table = get_scale_table()
 
-        updated = self.res_hyperprior.gaussian_conditional.update_scale_table(scale_table, force=force)
-        updated |= self.res_hyperprior.entropy_bottleneck.update(force=force)
+        updated = self.context_hyperprior.gaussian_conditional.update_scale_table(scale_table, force=force)
+        updated |= self.context_hyperprior.entropy_bottleneck.update(force=force)
 
         updated |= self.motion_hyperprior.gaussian_conditional.update_scale_table(scale_table, force=force)
         updated |= self.motion_hyperprior.entropy_bottleneck.update(force=force)
@@ -203,30 +290,35 @@ class NVC(nn.Module):
 
     def test(self,input_image, ref_image,frame_i):
 
-        strings_and_shape = self.compress(input_image, ref_image, frame_i)
+
+        strings_and_shape = self.compress(input_image, ref_image,frame_i)
+
 
         strings, shape = strings_and_shape["strings"], strings_and_shape["shape"]
 
         reconframe = self.decompress(ref_image, strings, shape)["x_hat"]
 
+
+
+
         num_pixels = input_image.size()[2] * input_image.size()[3]
         num_pixels = torch.tensor(num_pixels).float()
         mv_y_string=strings["motion"][0][0]
         mv_z_string=strings["motion"][1][0]
-        res_y_string=strings["res"][0][0]
-        res_z_string=strings["res"][1][0]
+        context_y_string=strings["context"][0][0]
+        context_z_string=strings["context"][1][0]
         mv_bpp=len(mv_y_string)* 8.0 / num_pixels
         mv_z_bpp=len(mv_z_string)* 8.0 / num_pixels
 
-        res_bpp=len(res_y_string)* 8.0 / num_pixels
-        res_z_bpp=len(res_z_string)* 8.0 / num_pixels
+        context_bpp=len( context_y_string)* 8.0 / num_pixels
+        context_z_bpp=len( context_z_string)* 8.0 / num_pixels
 
 
-        bpp = mv_bpp+mv_z_bpp+res_bpp+res_z_bpp
+        bpp = mv_bpp+mv_z_bpp+ context_bpp+ context_z_bpp
 
         reconframe = reconframe.clamp(0., 1.)
 
-        return bpp,reconframe,mv_bpp,mv_z_bpp,res_bpp,res_z_bpp
+        return bpp,reconframe,mv_bpp,mv_z_bpp, context_bpp, context_z_bpp
 
 
 
